@@ -1,11 +1,12 @@
-def noteiktDiapazonu(d1,d2,sk):
-  rezultats = "Skaitlis nav diapazonā!"
-  if d1>=sk<=d2:
-    rezultats = "Skaitlis ir diapazonā!"
-  return rezultats
+def aprAtlaidi(summa):
+  rez = ""
+  if summa<100:
+    rez = "Atlaide nav piešķirts, jānomaksā vēl " + str(summa)
+  elif summa>=100 and summa <200:
+    rez = "Atlaide 5%, jānomaksā vēl " + str(summa*0.95)
+  else:
+    rez = "Atlaide 10%, jānomaksā vēl " + str(summa*0.9)
+  return rez
 
-d1 = int(input("Ievadi diapazona sākumu: "))
-d2 = int(input("Ievadi diapazona beigas: "))
-sk = int(input("Ievadi skaitli: "))
-rez = noteiktDiapazonu(d1,d2,sk)
-print(rez)
+summa = float(input("Ievadiet summu: "))
+print(aprAtlaidi(summa))
