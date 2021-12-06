@@ -1,14 +1,8 @@
-def lenkuParbaude(len1,len2,len3):
-  rezultats = False
-  if len1+len2+len3==180:
-    rezultats = True
-  return rezultats
+def izdruka(daudzums,sar1):
+  for elem in range(0, daudzums):
+    print(sar1[elem])
+  return 0
 
-len1 = int(input("Ievādi 1. lenķi"))
-len2 = int(input("Ievādi 2. lenķi"))
-len3 = int(input("Ievādi 3. lenķi"))
-rez = lenkuParbaude(len1,len2,len3)
-if rez:
-  print("Trijsturis eksistē!")
-else:
-  print("Trijsturis neeksistē!")
+saraksts = [2,4,5,6,1,2,34,5]
+daudzums = int(input("Ievadi elementu skaitu: "))
+rez = izdruka(daudzums, saraksts)
